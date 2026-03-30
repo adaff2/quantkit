@@ -47,7 +47,7 @@ plot.show(paths, x_start=0, x_end=1, alpha=40)
 | `StandardBM` | Standard Brownian motion (µ=0, σ=1) | $\mathrm{d}S_t = \mathrm{d}W_t$ |
 | `BrownianMotion` | Arithmetic BM with drift and volatility | $\mathrm{d}S_t = \mu\mathrm{d}t + \sigma\mathrm{d}W_t$ |
 | `GBM` | Geometric Brownian Motion | $\mathrm{d}S_t = \mu S_t\mathrm{d}t + \sigma S_t\mathrm{d}W_t$ |
-| `RandomWalk` | Discrete random walk | $\Delta S_t = \mu\Delta t\varepsilon_t,\ \varepsilon_t \in \{-1,+1\}$ |
+| `RandomWalk` | Discrete random walk | $\Delta S_t = \mu\Delta t\varepsilon_t,\ \varepsilon_t = \pm 1$ |
 | `OrnsteinUhlenbeck` | Mean-reverting OU process | $\mathrm{d}S_t = \theta(\mu - S_t)\mathrm{d}t + \sigma\mathrm{d}W_t$ |
 | `PoissonProcess` | Homogeneous Poisson process | $\mathrm{d}N_t \sim \mathrm{Poisson}(\lambda\mathrm{d}t)$ |
 | `CompoundPoissonProcess` | Compound Poisson with custom jump distribution | $\mathrm{d}S_t = J_t\mathrm{d}N_t$ |
