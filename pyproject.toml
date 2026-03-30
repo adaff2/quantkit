@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quantkit"
+version = "0.1.0"
+description = "Quantitative finance toolkit: stochastic processes, Monte Carlo simulation, and real-time SDL2 visualisation."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Axel Dafflon" }]
+requires-python = ">=3.10"
+keywords = ["quantitative-finance", "stochastic-processes", "monte-carlo", "simulation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "numba>=0.57",
+]
+
+[project.optional-dependencies]
+visualize = [
+    "PySDL2>=0.9",
+    "PySDL2-dll>=2.0",
+]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/axeldafflon/quantkit"
+Repository = "https://github.com/axeldafflon/quantkit"
+Issues = "https://github.com/axeldafflon/quantkit/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/quantkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
