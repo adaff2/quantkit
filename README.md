@@ -44,21 +44,21 @@ plot.show(paths, x_start=0, x_end=1, alpha=40)
 
 | Class | Description | Stochastic equation |
 |---|---|---|
-| `StandardBM` | Standard Brownian motion (µ=0, σ=1) | $dS_t = dW_t$ |
-| `BrownianMotion` | Arithmetic BM with drift and volatility | $dS_t = \mu\,dt + \sigma\,dW_t$ |
-| `GBM` | Geometric Brownian Motion | $dS_t = \mu S_t\,dt + \sigma S_t\,dW_t$ |
-| `RandomWalk` | Discrete random walk | $\Delta S_t = \mu\,\Delta t\,\varepsilon_t,\ \varepsilon_t \in \{-1,+1\}$ |
-| `OrnsteinUhlenbeck` | Mean-reverting OU process | $dS_t = \theta(\mu - S_t)\,dt + \sigma\,dW_t$ |
-| `PoissonProcess` | Homogeneous Poisson process | $dN_t \sim \mathrm{Poisson}(\lambda\,dt)$ |
-| `CompoundPoissonProcess` | Compound Poisson with custom jump distribution | $dS_t = J_t\,dN_t$ |
-| `LevyFlight` | Lévy flight (Cauchy-distributed steps) | $\Delta S_t = c\,(\Delta t)^{1/\alpha}\,\Xi_t,\ \Xi_t \sim \mathrm{Cauchy}(0,1)$ |
-| `FractionalBrownianMotion` | fBM with Hurst parameter H | $S_t = B_t^H,\ \operatorname{Cov}(B_t^H,B_s^H)=\tfrac12\left(t^{2H}+s^{2H}-(t-s)^{2H}\right)$ |
-| `StableProcess` | α-stable process | $\Delta S_t = c\,(\Delta t)^{1/\alpha}L_t + \ell\,\Delta t$ |
-| `HestonModel` | Stochastic volatility (Heston) | $dS_t = \sqrt{v_t}\,S_t\,dW_1,\quad dv_t = \theta(\omega-v_t)dt + \sigma\sqrt{v_t}\,dW_2,\quad dW_1dW_2=\rho\,dt$ |
-| `CEV` | Constant Elasticity of Variance | $dS_t = \mu S_t\,dt + \sigma S_t^{\beta}\,dW_t$ |
-| `MertonJumpDiffusion` | Jump-diffusion (Merton) | $dS_t = \mu S_t\,dt + \sigma\sqrt{S_t}\,dW_t + J_t\,dN_t$ |
-| `VarianceGamma` | Variance Gamma process | $\Delta S_t = \mu S_t\,\Delta t + \sigma\sqrt{S_t}\,\Delta W_{G_t},\quad \Delta G_t \sim \Gamma(\Delta t/\nu,\nu)$ |
-| `ThreeTwoModel` | 3/2 stochastic volatility model | $dS_t = \sqrt{v_t}\,S_t\,dW_1,\quad dv_t = \theta(\omega-v_t)dt + \sigma v_t^{3/2} dW_2$ |
+| `StandardBM` | Standard Brownian motion (µ=0, σ=1) | $\mathrm{d}S_t = \mathrm{d}W_t$ |
+| `BrownianMotion` | Arithmetic BM with drift and volatility | $\mathrm{d}S_t = \mu\mathrm{d}t + \sigma\mathrm{d}W_t$ |
+| `GBM` | Geometric Brownian Motion | $\mathrm{d}S_t = \mu S_t\mathrm{d}t + \sigma S_t\mathrm{d}W_t$ |
+| `RandomWalk` | Discrete random walk | $\Delta S_t = \mu\Delta t\varepsilon_t,\ \varepsilon_t \in \{-1,+1\}$ |
+| `OrnsteinUhlenbeck` | Mean-reverting OU process | $\mathrm{d}S_t = \theta(\mu - S_t)\mathrm{d}t + \sigma\mathrm{d}W_t$ |
+| `PoissonProcess` | Homogeneous Poisson process | $\mathrm{d}N_t \sim \mathrm{Poisson}(\lambda\mathrm{d}t)$ |
+| `CompoundPoissonProcess` | Compound Poisson with custom jump distribution | $\mathrm{d}S_t = J_t\mathrm{d}N_t$ |
+| `LevyFlight` | Lévy flight (Cauchy-distributed steps) | $\Delta S_t = c(\Delta t)^{1/\alpha}\Xi_t,\ \Xi_t \sim \mathrm{Cauchy}(0,1)$ |
+| `FractionalBrownianMotion` | fBM with Hurst parameter H | $S_t = B_t^H,\ \text{Cov}(B_t^H,B_s^H)=\tfrac12\left(t^{2H}+s^{2H}-(t-s)^{2H}\right)$ |
+| `StableProcess` | α-stable process | $\Delta S_t = c(\Delta t)^{1/\alpha}L_t + \ell\Delta t$ |
+| `HestonModel` | Stochastic volatility (Heston) | $\mathrm{d}S_t = \sqrt{v_t}S_t\mathrm{d}W_1,\quad \mathrm{d}v_t = \theta(\omega-v_t)\mathrm{d}t + \sigma\sqrt{v_t}\mathrm{d}W_2,\quad \mathrm{d}W_1\mathrm{d}W_2=\rho\mathrm{d}t$ |
+| `CEV` | Constant Elasticity of Variance | $\mathrm{d}S_t = \mu S_t\mathrm{d}t + \sigma S_t^{\beta}\mathrm{d}W_t$ |
+| `MertonJumpDiffusion` | Jump-diffusion (Merton) | $\mathrm{d}S_t = \mu S_t\mathrm{d}t + \sigma\sqrt{S_t}\mathrm{d}W_t + J_t\mathrm{d}N_t$ |
+| `VarianceGamma` | Variance Gamma process | $\Delta S_t = \mu S_t\Delta t + \sigma\sqrt{S_t}\Delta W_{G_t},\quad \Delta G_t \sim \Gamma(\Delta t/\nu,\nu)$ |
+| `ThreeTwoModel` | 3/2 stochastic volatility model | $\mathrm{d}S_t = \sqrt{v_t}S_t\mathrm{d}W_1,\quad \mathrm{d}v_t = \theta(\omega-v_t)\mathrm{d}t + \sigma v_t^{3/2}\mathrm{d}W_2$ |
 
 ## Development
 
