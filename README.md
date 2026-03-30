@@ -3,6 +3,8 @@
 A Python library for quantitative finance: stochastic processes, Monte Carlo
 simulation, and real-time SDL2 visualisation.
 
+⚠️ This library is currently under development, and expects active future updates
+
 ## Installation
 
 ```bash
